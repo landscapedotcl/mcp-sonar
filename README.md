@@ -12,26 +12,14 @@ MCP server para consultar SonarQube desde Claude Code.
 
 ## Instalacion
 
-### 1. Clonar y compilar
-
-```bash
-git clone https://github.com/landscapedotcl/mcp-sonar.git
-cd mcp-sonar
-npm install
-npm run build
-```
-
-### 2. Configurar en Claude Code
-
 Agregar a `~/.claude/mcp.json`:
 
 ```json
 {
   "mcpServers": {
     "sonar-mcp": {
-      "command": "node",
-      "args": ["/ruta/absoluta/a/mcp-sonar/dist/index.js"],
-      "cwd": "/ruta/absoluta/a/mcp-sonar",
+      "command": "npx",
+      "args": ["-y", "github:landscapedotcl/mcp-sonar"],
       "env": {
         "SONAR_URL": "https://tu-instancia-sonarqube.com",
         "SONAR_TOKEN": "tu_token_aqui"
@@ -41,9 +29,7 @@ Agregar a `~/.claude/mcp.json`:
 }
 ```
 
-### 3. Reiniciar Claude Code
-
-Reinicia Claude Code para que cargue el MCP server.
+Reiniciar Claude Code para que cargue el MCP server.
 
 ## Uso
 

@@ -4,8 +4,12 @@
   "description": "MCP server for SonarQube",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "mcp-sonar": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "start": "node dist/index.js"
   },
   "dependencies": {
