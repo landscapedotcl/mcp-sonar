@@ -2,7 +2,6 @@
   "name": "sonar-mcp",
   "version": "1.0.0",
   "description": "MCP server for SonarQube",
-  "type": "module",
   "main": "dist/index.js",
   "bin": {
     "mcp-sonar": "dist/index.js"
